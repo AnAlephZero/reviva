@@ -3,6 +3,7 @@ import './App.css';
 import { Layout } from './components/Layout/Layout';
 import ProductList from './components/Products/ProductList';
 import Products from './components/Products/Products';
+import ReceiptList from './components/Receipt/ReceiptList';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Layout>
         <Products/>
         <ProductList />
-        {/* <Output /> */}
+        <ReceiptList />
       </Layout>
     </React.Fragment>
   );

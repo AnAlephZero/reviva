@@ -23,7 +23,7 @@ const MainHeader: React.FC<IMainHeaderProps> = () => {
         };
         const p2set1: IProductItem = {
           imported: false,
-          price: 14.49,
+          price: 14.99,
           qty: 1,
           type: ProductType["Music CD"],
         };

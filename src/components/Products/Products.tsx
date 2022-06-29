@@ -24,14 +24,11 @@ const Products: FC<ProductsProps> = (props) => {
     dispatch(productActions.clearProducts());
   };
 
-  const handlePrintDetails = () => {};
-
   return (
     <Fragment>
       <AddProduct onAddProduct={handleOnAddProducts}></AddProduct>
       <div className={styles.userAction}>
         <Button onClick={handleOnClearProducts}>Clear Product List</Button>
-        <Button onClick={handlePrintDetails}>Print Receipt Details</Button>
       </div>
     </Fragment>
   );

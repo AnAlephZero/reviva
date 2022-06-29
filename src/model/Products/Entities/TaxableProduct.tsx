@@ -9,7 +9,7 @@ export class TaxableProduct implements ITaxable {
 
     constructor(salesTax: number, imported: boolean) {
         this.salesTax = salesTax;
-        this.dutyTax = imported ? 10 : 0;
+        this.dutyTax = imported ? 5 : 0;
     }
     getSalesTaxPercentage(): number {
         return this.salesTax;

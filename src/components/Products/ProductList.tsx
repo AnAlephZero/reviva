@@ -22,6 +22,7 @@ const ProductList: FC<ProductListProps> = (props) => {
       {items.length > 0 && (
         <Card className={styles.users}>
           <ul>
+            <h3>Product List</h3>
             {items.map((product, index) => (
               <li key={index}>{formatProduct(product)}</li>
             ))}
