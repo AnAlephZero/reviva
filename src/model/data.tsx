@@ -12,5 +12,14 @@ export interface WithId {
 export interface IProductItemWithId extends IProductItem, WithId {}
 
 export enum ProductType {
-    'BOOK' , 'CD' , 'CHOCO_BOX' , 'PERFUME' , 'PILLS' , 'CHOCOLATE' }
+  "Book",
+  "Music CD",
+  "Box of chocolates",
+  "Bottle of Perfume",
+  "Packet of headache pills",
+  "Chocolate Bar",
+}
 
+export interface TProductState {
+  items: IProductItem[];
+}

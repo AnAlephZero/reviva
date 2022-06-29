@@ -10,7 +10,7 @@ const Layout: React.FC<ILayoutProps> = (props) => {
     return (
         <Fragment>
             <MainHeader />
-            <p>{props.children}</p>
+            <div>{props.children}</div>
         </Fragment>
     );
 }
