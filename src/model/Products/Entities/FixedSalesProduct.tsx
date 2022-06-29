@@ -1,6 +1,6 @@
 import { BaseProduct } from "./BaseProduct";
 
-export class Cd extends BaseProduct {
+export class FixedSalesTaxProduct extends BaseProduct {
     constructor(
         price: number,
         qty: number,
