@@ -25,16 +25,12 @@ export class BaseProduct extends TaxableProduct implements IBaseProduct {
   }
 
   calculateSalesTaxes(): number {
-    const amount = this.qty * this.price;
-    console.log("Amount", amount)
+    const amount = this.price;
     const dutyTaxAmount = (amount * this.getDutyTaxPercentage()) / 100;
-    console.log("dutyTaxAmount", dutyTaxAmount)
     const taxSalesAmount = (amount * this.getSalesTaxPercentage()) / 100;
-    console.log("taxSalesAmount", taxSalesAmount)
     const totalTaxes = dutyTaxAmount + taxSalesAmount;
-    console.log("totalTaxes", totalTaxes)
     const rounded = (Math.ceil(totalTaxes * 20) / 20).toFixed(2);
-    console.log("rounded", rounded)
-    return Number(rounded);
+    const totalRounded = Number(rounded) * this.qty;
+    return Number(totalRounded);
   }
 }

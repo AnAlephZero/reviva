@@ -4,6 +4,7 @@ import { Book } from "../Entities/Book";
 import { Cd } from "../Entities/Cd";
 import { Chocolate } from "../Entities/Chocolate";
 import { Perfume } from "../Entities/Perfume";
+import { Pills } from "../Entities/Pills";
 
 export class ProductHelperFactory {
   build(item: IProductItem): IBaseProduct | null {
@@ -13,10 +14,12 @@ export class ProductHelperFactory {
       case ProductType["Music CD"]:
         return new Cd(item.price, item.qty, item.imported);
       case ProductType["Chocolate Bar"]:
-        case ProductType["Box of chocolates"]:
+      case ProductType["Box of chocolates"]:
         return new Chocolate(item.price, item.qty, item.imported);
       case ProductType["Bottle of Perfume"]:
         return new Perfume(item.price, item.qty, item.imported);
+      case ProductType["Packet of headache pills"]:
+        return new Pills(item.price, item.qty, item.imported);
       default:
         return null;
     }
