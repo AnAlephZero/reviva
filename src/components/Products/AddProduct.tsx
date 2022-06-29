@@ -6,10 +6,9 @@ import styles from "./AddProduct.module.css";
 
 interface AddProductProps {
   onAddProduct: (item: IProductItem) => void;
-  onClear: () => void; 
 }
 
-const AddProduct: FC<AddProductProps> = ({ onAddProduct, onClear }) => {
+const AddProduct: FC<AddProductProps> = ({ onAddProduct }) => {
   const [type, setType] = useState<ProductType>(ProductType.Book);
   const [price, setPrice] = useState<number>(0);
   const [qty, setQty] = useState<number>(1);
@@ -106,9 +105,6 @@ const AddProduct: FC<AddProductProps> = ({ onAddProduct, onClear }) => {
 
           <Button className={styles.submit} type="submit">
             Add Product
-          </Button>
-          <Button className={styles.submit} onClick={onClear}>
-            Clear List
           </Button>
         </form>
       </Card>

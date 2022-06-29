@@ -5,6 +5,11 @@ export interface IProductItem {
   qty: number;
 }
 
+export interface ITaxesInfo {
+  baseTax: number;
+  importDuty: number;
+}
+
 export interface WithId {
   id: string;
 }
